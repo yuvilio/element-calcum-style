@@ -1,0 +1,17 @@
+{
+  "name": "element-calcum-style",
+  "version": "0.5.0",
+  "description": "Calculate some data item about elements you select. Refresh it's value when you change a style in your browser's inspector.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuvilio",
+  "license": "MIT",
+  "dependencies": {
+    "mutation-observer": "^1.0.0",
+    "sliced": "0.0.5"
+  },
+  "devDependencies": {
+  }
+}
