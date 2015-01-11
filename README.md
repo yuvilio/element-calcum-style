@@ -17,7 +17,7 @@ var elementCalcumStyle = require('element-calcum-style');
 ```
 
 
-Altenately for a standalone window global, download the [latest element-calcum.js build here](http://yuvilio.github.io/element-calcum-style/build/element-calcum-style.js)and include it in  your script to have a global window.elementCalcumStyle available.
+Alternately for a standalone window global, download the [latest element-calcum.js build here](http://yuvilio.github.io/element-calcum-style/build/element-calcum-style.js) and include it in  your script to have a global window.elementCalcumStyle available.
 
 ```html
 <script src="element-calcum-style.js"></script>
@@ -54,7 +54,7 @@ elementCalcumStyle({
 Optional css to reveal the data change visually
 
 ```css
-..some-element p /* the elements we've recalculated */
+.some-element p /* the elements we've recalculated */
 {
   &:before {
     display: table;
