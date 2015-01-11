@@ -17,7 +17,7 @@ var elementCalcumStyle = require('element-calcum-style');
 ```
 
 
-Alternately for a standalone window global, download the [latest element-calcum.js build here](http://yuvilio.github.io/element-calcum-style/build/element-calcum-style.js) and include it in  your script to have a global window.elementCalcumStyle available.
+Alternately for a standalone window global, download the [latest element-calcum-style.js build here](http://yuvilio.github.io/element-calcum-style/build/element-calcum-style.js) and include it in  your script to have a global window.elementCalcumStyle available.
 
 ```html
 <script src="element-calcum-style.js"></script>
