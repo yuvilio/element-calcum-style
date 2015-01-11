@@ -1,6 +1,6 @@
 # element-calcum-style
 
-## [Demo](yuvilio.github.io/element-calcum-style)
+## [Demo](https://yuvilio.github.io/element-calcum-style)
 
 Calculate some data item about elements you select. Refresh it's value when you change a style with your inspector.
 
