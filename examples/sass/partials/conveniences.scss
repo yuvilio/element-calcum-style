@@ -1,0 +1,44 @@
+body {
+  background: aliceblue;
+  color: darkslategray;
+}
+//border-box as the box-sizing model
+* {
+  box-sizing: border-box;
+}
+
+//responsive friendly media
+img, video {
+  max-width:100%;
+  height:auto;
+}
+
+//base font size (for rem/em)
+// body { font-size: 62.5%; } //base font size at 10px.
+// body { font-size: 100%; } //other technique
+
+
+
+
+.marked {
+  margin: 10px 0;
+}
+
+p, .marked {
+  font-size: 1.8rem;
+}
+
+//some colored boxes (.box-1, .box-2, ... .box-12) //feel free to override
+$grid-colors: fuchsia, green, yellow, teal, orange, beige, coral, cornflowerblue, darkkhaki, darkolivegreen, darkred, deeppink;
+$max-grid-cols: 12;
+
+
+// ex: .box-1 {
+//   background: fuchsia; }
+@for $i from 1 through $max-grid-cols {
+  .box-#{$i} {
+    background-color: #{nth($grid-colors, $i)} ;
+    height: 100px;
+    color: white;
+  }
+}

@@ -1,10 +1,11 @@
 {
   "name": "element-calcum-style",
   "version": "0.5.0",
-  "description": "Calculate some data item about elements you select. Refresh it's value when you change a style in your browser's inspector.",
+  "description": "Calculate some data item about elements you select, and have it refreshed as you adjust some style in your browser inspector.",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-standalone-global": "./build-standalone-global.sh"
   },
   "author": "yuvilio",
   "license": "MIT",
@@ -13,5 +14,30 @@
     "sliced": "0.0.5"
   },
   "devDependencies": {
-  }
+    "browser-sync": "^1.9.0",
+    "browserify": "^8.1.0",
+    "browserify-standalone": "^0.3.0",
+    "element-size": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-gh-pages": "^0.4.0",
+    "gulp-release-tasks": "0.0.3",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-swig": "^0.7.4",
+    "highlight-redux": "^1.0.1",
+    "highlight.js": "^8.4.0",
+    "marked": "^0.3.2",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuvilio/element-calcum-style.git"
+  },
+  "keywords": [
+    "browser",
+    "css",
+    "debug",
+    "responsive"
+  ]
 }

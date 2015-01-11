@@ -1,0 +1,46 @@
+//codeh highlight theme
+@import 'vendor/highlightjs/solarized_dark.scss';
+@import 'partials/conveniences.scss';
+
+/* Some styles  exposing the data attributes visually as css content using the css attr() function  */
+[class*="box"] {
+  &:before {
+    display: table;
+    bottom: 20px;
+    background-color: salmon;
+    color: white;
+    padding: 3px 2px;
+    right: 0;
+
+  //example specific styles
+
+  .ex-height-flex & {
+    content: attr(data-height);
+  }
+
+
+  }
+}
+
+.ex-height-flex {
+  background-color: #555;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 200px; //starting height
+
+
+  display: flex;
+  flex-direction: column;
+
+  [class*="box-"] {
+    &:first-child, &:last-child {
+      flex: 1;
+    }
+
+    &:nth-child(2){
+      flex: 2;
+    }
+
+  }
+}
