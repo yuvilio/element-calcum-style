@@ -37,11 +37,11 @@ Here is an example of an element whose children's height we want to see how they
 ```js
 
 elementCalcumStyle({
-  selector: '.ex-height-flex [class*="box"] ',
+  selector: '.some-element [class*="box"] ',
   label: 'height', //data-height
   unit: 'px',
   labelVisible: 1,
-  eventOnElem: document.querySelector('.ex-height-flex'),
+  eventOnElem: document.querySelector('.some-element'),
   style: 'height', //the one we'll affect in the inspector
 
   callback: function(el){ //the calculation we're doing on each selected element
