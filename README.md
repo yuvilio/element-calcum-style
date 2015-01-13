@@ -57,13 +57,22 @@ Optional css to reveal the data change visually
 .some-element p /* the elements we've recalculated */
 {
   &:before {
+    content: attr(data-height); /* the calculations we generated using the label picked (data-[label]) */
+
+    /* The rest of the css is pretty arbitrary. adjust as needed */
     display: table;
     bottom: 20px;
     background-color: salmon;
     color: white;
     padding: 3px 2px;
     right: 0;
-    content: attr(data-height);
+
   }
 }
 ```
+
+## Questions
+
+Isn't this the same as element-calcum?
+
+Not exactly.  element-calcum makes use of common event listening to listen for DOM events ('resize', 'mousein', ...). In contrast, element-calcum-style uses the MutationObserver API to listen to style change events. 
