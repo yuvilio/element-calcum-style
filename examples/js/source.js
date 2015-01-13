@@ -44,5 +44,30 @@ window.addEventListener('load', function(){
   });
 
 
+  //ex-multiple
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'width', //data-height
+    unit: 'px',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'width', 
 
+    callback: function(el){
+      return el.offsetWidth;
+    }
+  });
+
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'height', //data-height
+    unit: 'px',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'height', //the one we'll affect in the inspector
+
+    callback: function(el){
+      return el.offsetHeight;
+    }
+  });
 }); //on load

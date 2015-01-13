@@ -30,9 +30,23 @@
       <div class="item box-3">Box 3</div>
     </div>
 
+    <div class="marked">## Ex. 2: Multiple measurements</div>
+
+    <div class="marked">You can monitor and display as many measurements as you want on the same elements. Simply run a calcum for each one and optionally concatenate them in the css content. adjusting the height/width below of .ex-multiple-calcum in the inspector will trigger a recalc of both. </div>
+
+    <div class="ex-multiple-calcum">
+      <div class="box-4">box-1</div>
+      <div class="box-5">box-2</div>
+      <div class="box-8">box-3</div>
+
+    </div>
+
 
   <div class="marked">Need to use dom events (resize, mouseover, ...) or your own inputs (slider inputs, buttons, )? Have a look at [element-calcum](http://yuvilio.github.io/element-calcum/)</div>
 
   </div>
+
+
+
 </body>
 </html>

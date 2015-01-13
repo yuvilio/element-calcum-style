@@ -18,11 +18,15 @@
     content: attr(data-height);
   }
 
+  .ex-multiple-calcum & {
+    content: attr(data-width) " " attr(data-height);
+  }
+
 
   }
 }
 
-.ex-height-flex {
+.ex-height-flex, .ex-multiple-calcum {
   background-color: #555;
   width: 100%;
   margin: 0;
