@@ -45,7 +45,32 @@ window.addEventListener('load', function(){
   });
 
 
+  //ex-multiple
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'width', //data-height
+    unit: 'px',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'width', 
 
+    callback: function(el){
+      return el.offsetWidth;
+    }
+  });
+
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'height', //data-height
+    unit: 'px',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'height', //the one we'll affect in the inspector
+
+    callback: function(el){
+      return el.offsetHeight;
+    }
+  });
 }); //on load
 
 },{"../../index.js":"/home/yuvilio/apps/original_node_modules/element-calcum-style/index.js","highlight-redux":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/index.js","highlight-redux/lib/languages/css":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/languages/css.js","highlight-redux/lib/languages/javascript":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/languages/javascript.js","marked":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/marked/lib/marked.js","sliced":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/sliced/index.js"}],"/home/yuvilio/apps/original_node_modules/element-calcum-style/index.js":[function(require,module,exports){

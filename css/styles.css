@@ -183,8 +183,10 @@ p, .marked {
   right: 0; }
   .ex-height-flex [class*="box"]:before {
     content: attr(data-height); }
+  .ex-multiple-calcum [class*="box"]:before {
+    content: attr(data-width) " " attr(data-height); }
 
-.ex-height-flex {
+.ex-height-flex, .ex-multiple-calcum {
   background-color: #555;
   width: 100%;
   margin: 0;
@@ -196,11 +198,11 @@ p, .marked {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .ex-height-flex [class*="box-"]:first-child, .ex-height-flex [class*="box-"]:last-child {
+  .ex-height-flex [class*="box-"]:first-child, .ex-height-flex [class*="box-"]:last-child, .ex-multiple-calcum [class*="box-"]:first-child, .ex-multiple-calcum [class*="box-"]:last-child {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
-  .ex-height-flex [class*="box-"]:nth-child(2) {
+  .ex-height-flex [class*="box-"]:nth-child(2), .ex-multiple-calcum [class*="box-"]:nth-child(2) {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2; }
