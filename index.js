@@ -28,7 +28,7 @@ module.exports = function(opts){
   options.label = opts.label ||  'offsetWidth';
 
   options.labelVisible = opts.labelVisible && 1; //default to label being visible unless specified
-  options.units = opts.units || 'px'; //default to 'px' being the unit unless specified (this is up to the client. the library knows nothing)
+  options.units = opts.units || ''; //default to 'px' being the unit unless specified (this is up to the client. the library knows nothing)
 
   options.callback = opts.callback || function(el){
     return el.offsetWidth;
@@ -53,7 +53,7 @@ module.exports = function(opts){
     mutations.forEach(function(mutation) {
 
       var styleAttr = mutation.target.getAttribute('style');
-      
+
       //was it the style change  we're examining
       if ( styleAttr.contains(options.style) ){
         calcum(options);
