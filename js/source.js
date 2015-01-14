@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-height-flex [class*="box"] ',
     label: 'height', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-height-flex'),
     style: 'height', //the one we'll affect in the inspector
@@ -49,10 +49,10 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-multiple-calcum [class*="box"] ',
     label: 'width', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-multiple-calcum'),
-    style: 'width', 
+    style: 'width',
 
     callback: function(el){
       return el.offsetWidth;
@@ -62,7 +62,7 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-multiple-calcum [class*="box"] ',
     label: 'height', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-multiple-calcum'),
     style: 'height', //the one we'll affect in the inspector
@@ -71,6 +71,23 @@ window.addEventListener('load', function(){
       return el.offsetHeight;
     }
   });
+
+
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'width-height-ratio', //data-height
+    units: '',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'height', //the one we'll affect in the inspector
+
+    callback: function(el){
+      return (el.offsetWidth / el.offsetHeight).toFixed(1);
+    }
+  });
+
+
+
 }); //on load
 
 },{"../../index.js":"/home/yuvilio/apps/original_node_modules/element-calcum-style/index.js","highlight-redux":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/index.js","highlight-redux/lib/languages/css":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/languages/css.js","highlight-redux/lib/languages/javascript":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/highlight-redux/lib/languages/javascript.js","marked":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/marked/lib/marked.js","sliced":"/home/yuvilio/apps/original_node_modules/element-calcum-style/node_modules/sliced/index.js"}],"/home/yuvilio/apps/original_node_modules/element-calcum-style/index.js":[function(require,module,exports){
@@ -104,7 +121,7 @@ module.exports = function(opts){
   options.label = opts.label ||  'offsetWidth';
 
   options.labelVisible = opts.labelVisible && 1; //default to label being visible unless specified
-  options.units = opts.units || 'px'; //default to 'px' being the unit unless specified (this is up to the client. the library knows nothing)
+  options.units = opts.units || ''; //default to 'px' being the unit unless specified (this is up to the client. the library knows nothing)
 
   options.callback = opts.callback || function(el){
     return el.offsetWidth;
@@ -129,7 +146,7 @@ module.exports = function(opts){
     mutations.forEach(function(mutation) {
 
       var styleAttr = mutation.target.getAttribute('style');
-      
+
       //was it the style change  we're examining
       if ( styleAttr.contains(options.style) ){
         calcum(options);

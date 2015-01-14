@@ -184,7 +184,7 @@ p, .marked {
   .ex-height-flex [class*="box"]:before {
     content: attr(data-height); }
   .ex-multiple-calcum [class*="box"]:before {
-    content: attr(data-width) " " attr(data-height); }
+    content: attr(data-width) ", " attr(data-height) ", " attr(data-width-height-ratio); }
 
 .ex-height-flex, .ex-multiple-calcum {
   background-color: #555;
