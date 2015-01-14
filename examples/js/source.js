@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-height-flex [class*="box"] ',
     label: 'height', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-height-flex'),
     style: 'height', //the one we'll affect in the inspector
@@ -48,10 +48,10 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-multiple-calcum [class*="box"] ',
     label: 'width', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-multiple-calcum'),
-    style: 'width', 
+    style: 'width',
 
     callback: function(el){
       return el.offsetWidth;
@@ -61,7 +61,7 @@ window.addEventListener('load', function(){
   elementCalcumStyle({
     selector: '.ex-multiple-calcum [class*="box"] ',
     label: 'height', //data-height
-    unit: 'px',
+    units: 'px',
     labelVisible: 1,
     eventOnElem: document.querySelector('.ex-multiple-calcum'),
     style: 'height', //the one we'll affect in the inspector
@@ -70,4 +70,21 @@ window.addEventListener('load', function(){
       return el.offsetHeight;
     }
   });
+
+
+  elementCalcumStyle({
+    selector: '.ex-multiple-calcum [class*="box"] ',
+    label: 'width-height-ratio', //data-height
+    units: '',
+    labelVisible: 1,
+    eventOnElem: document.querySelector('.ex-multiple-calcum'),
+    style: 'height', //the one we'll affect in the inspector
+
+    callback: function(el){
+      return (el.offsetWidth / el.offsetHeight).toFixed(1);
+    }
+  });
+
+
+
 }); //on load

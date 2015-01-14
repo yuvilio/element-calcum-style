@@ -32,7 +32,7 @@
 
     <div class="marked">## Ex. 2: Multiple measurements</div>
 
-    <div class="marked">You can monitor and display as many measurements as you want on the same elements. Simply run a calcum for each one and optionally concatenate them in the css content. adjusting the height/width below of .ex-multiple-calcum in the inspector will trigger a recalc of both. </div>
+    <div class="marked">You can monitor and display as many measurements as you want on the same elements. Simply run a calcum for each one and optionally concatenate them in the css content. Adjusting the height/width below of .ex-multiple-calcum in the inspector will trigger a recalc of both along with a width-height ratio (when adjusting height). </div>
 
     <div class="ex-multiple-calcum">
       <div class="box-4">box-1</div>

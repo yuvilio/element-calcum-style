@@ -19,7 +19,7 @@
   }
 
   .ex-multiple-calcum & {
-    content: attr(data-width) " " attr(data-height);
+    content: attr(data-width) ", " attr(data-height) ", " attr(data-width-height-ratio);
   }
 
 

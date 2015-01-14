@@ -39,7 +39,7 @@ Here is an example of an element whose children's height we want to see how they
 elementCalcumStyle({
   selector: '.some-element [class*="box"] ',
   label: 'height', //data-height
-  unit: 'px',
+  units: 'px',
   labelVisible: 1,
   eventOnElem: document.querySelector('.some-element'),
   style: 'height', //the one we'll affect in the inspector
@@ -73,6 +73,10 @@ Optional css to reveal the data change visually
 
 ## Questions
 
-Isn't this the same as element-calcum?
+Isn't this the same as [element-calcum](https://github.com/yuvilio/element-calcum) ?
 
-Not exactly.  element-calcum makes use of common event listening to listen for DOM events ('resize', 'mousein', ...). In contrast, element-calcum-style uses the MutationObserver API to listen to style change events. 
+Not exactly.  element-calcum makes use of the DOM Level 2 [event listener API](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener) to listen for DOM events ('resize', 'mousein', ...). In contrast, element-calcum-style uses the [MutationObserver API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to listen to style change events.
+
+Can I use this on any web page?
+
+Sure. You could host element-calcum locally and inject it into a page using browser extension like [Tampermonkey](http://tampermonkey.net/) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) to pull it in.
