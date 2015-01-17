@@ -180,11 +180,14 @@ p, .marked {
   background-color: salmon;
   color: white;
   padding: 3px 2px;
-  right: 0; }
+  position: absolute;
+  bottom: initial;
+  left: initial;
+  white-space: pre; }
   .ex-height-flex [class*="box"]:before {
     content: attr(data-height); }
   .ex-multiple-calcum [class*="box"]:before {
-    content: attr(data-width) ", " attr(data-height) ", " attr(data-width-height-ratio); }
+    content: attr(data-width) ", " attr(data-height) "\a" attr(data-width-height-ratio); }
 
 .ex-height-flex, .ex-multiple-calcum {
   background-color: #555;
