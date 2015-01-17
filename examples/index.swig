@@ -42,7 +42,7 @@
     </div>
 
 
-  <div class="marked">Need to use dom events (resize, mouseover, ...) or your own inputs (slider inputs, buttons, )? Have a look at [element-calcum](http://yuvilio.github.io/element-calcum/)</div>
+  <div class="marked">Need to use dom events (resize, mouseover, ...) or your own inputs (slider inputs, buttons, )? Have a look at [element-calcum](http://yuvilio.github.io/element-calcum/). More demos are available there as well.</div>
 
   </div>
 

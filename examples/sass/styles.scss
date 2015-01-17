@@ -10,7 +10,12 @@
     background-color: salmon;
     color: white;
     padding: 3px 2px;
-    right: 0;
+    position: absolute;
+    bottom: initial;
+    left: initial;
+
+
+    white-space: pre; //use this mode to allow \a as newline in csscontent
 
   //example specific styles
 
@@ -19,7 +24,7 @@
   }
 
   .ex-multiple-calcum & {
-    content: attr(data-width) ", " attr(data-height) ", " attr(data-width-height-ratio);
+    content: attr(data-width) ", " attr(data-height) "\a " attr(data-width-height-ratio);
   }
 
 
